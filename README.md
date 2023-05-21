@@ -56,7 +56,7 @@ The nonce was chosen to be 12 bytes according to NIST300-38D[^2] and was generat
 * To mitigate this, you should only encrypt about 2<sup>32</sup> chunks under a single key. This results in about a one in four billion safety margin against the key 'wearing out'.[^4]
 * The total data that should be encrypted with one key is about 2<sup>68</sup> bytes.[^4]
 
-*Note: This can be chunks spread over several encryptions with the same key.*
+*Note: This can be chunks spread over several encryptions with the same key. Additionally, use this script at your own risk.*
 
 [^1]: STRONGER KEY DERIVATION VIA SEQUENTIAL MEMORY-HARD FUNCTIONS (C. Percival, Ed.) [Review of STRONGER KEY DERIVATION VIA SEQUENTIAL MEMORY-HARD FUNCTIONS]. Retrieved May 20, 2023, from https://www.tarsnap.com/scrypt/scrypt.pdf
 [^2]: Recommendation for Block Cipher Modes of Operation: Galois/Counter Mode (GCM) and GMAC (M. Dworkin, Ed.) [Review of Recommendation for Block Cipher Modes of Operation: Galois/Counter Mode (GCM) and GMAC]. National Institute of Standards and Technology. https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf
