@@ -29,12 +29,10 @@ Version: May 20th, 2023
 
 import os
 import argparse
-import os
 from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 import struct
 from io import BytesIO
-from functools import reduce
 
 MB_TO_BYTES = 10**6
 NONCE_SIZE = 12
@@ -328,7 +326,7 @@ def main():
     parser.add_argument('--target', help='Sets the encryption target')
     parser.add_argument('--keyfile', help='Specs the location of the key file')
     parser.add_argument('--store', help='Specifies store directory name.')
-    parser.add_argument('--delete', help='Deletes old data once encrypted.', action='store_true')
+    parser.add_argument('--delete', help='Deletes old data once encrypted/decrypted (respectively, unencrypted and store file)', action='store_true')
     parser.add_argument('--chunksize', help='How much of the file will be stored in memory before being flushed, in megabytes.')
     args = parser.parse_args()
     
